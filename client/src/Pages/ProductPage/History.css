@@ -1,0 +1,39 @@
+.row{
+    width: 100%;
+    padding: 1rem 2rem;
+    margin-bottom: 0.5rem !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    background-color: aqua!important;
+}
+.history-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.historyTable{
+    width: 90%;
+    padding: 50px;
+}
+.rowHeading{
+    font-size: 1.2rem;
+    font-weight:bold ;
+}
+.row:hover{
+    transform: translateY(-5px)!important;
+}
+td{
+  
+    text-align: center!important;
+    width: 100%;
+}
+
+.td-id{
+    text-align: center!important;
+}

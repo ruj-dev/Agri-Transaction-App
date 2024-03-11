@@ -1,0 +1,85 @@
+.inventory-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 10px;
+    padding: 5px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  .inventory-card {
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+   
+  }
+  .inventory-card {
+    max-width: 300px;
+}
+  .inventory-card:hover{
+    border:2px solid green!important;
+    transform: translateY(-5px);
+  }
+  .red-card:hover{
+    border:2px solid red!important;
+    transform: translateY(-5px);
+  }
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+ #delete-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #e00f0f;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  .stock-in-btn{
+    padding: 8px 16px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: rgb(59, 133, 61);
+    color: #fff;
+    transition: background-color 0.3s;
+
+  }
+  .fab-container{
+    margin-top: 50px;
+  }
+  .stock-in-btn{
+
+
+  }
+  .stock-out-btn{
+
+  }
+  .stock-in-btn:hover{
+transform: translateY(-5px);
+  }
+  .stock-out-btn:hover{
+    transform: translateY(-5px);
+
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  .red{
+    color: #e00f0f;
+  }
+  .green{
+    color: #02a408;
+  }
+  .border-red{
+    border:5px solid red
+  }
+  

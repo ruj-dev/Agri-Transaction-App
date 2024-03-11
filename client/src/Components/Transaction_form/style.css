@@ -1,0 +1,18 @@
+.form-card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 25px;
+
+}
+
+#form-button{
+    background-color: rgb(10, 168, 10);
+    margin-top: 10px;
+    color: white;
+
+}
+#form-button-cancel{
+    background-color: rgb(150, 155, 150);
+    margin-top: 10px;
+    color: white;
+
+}

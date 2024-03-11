@@ -1,0 +1,24 @@
+.product-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 30px;
+}
+.quantity-container{
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 50px;
+    min-width: 250px;
+}
+.name-container{
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+
+}

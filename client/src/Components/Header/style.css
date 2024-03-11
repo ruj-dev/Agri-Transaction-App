@@ -1,0 +1,31 @@
+.header-container{
+    margin: 0;
+    padding: 0;
+    background-color: aqua;   
+
+}
+.button {
+    color: white!important;
+    text-decoration: none;
+    border: 1px solid white!important;
+    transition: border 0.3s ease !important; 
+    margin-right: 10px!important;
+  }
+  #link{
+    color: white!important;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    letter-spacing: 0.0075em;
+    margin-right: 30px;
+    
+  }
+  #link-container{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+   justify-content: space-between;
+   
+    
+  }

@@ -1,0 +1,17 @@
+.tiles{
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.tiles:hover{
+    transform: translateY(-5px);
+}
+.tiles-container {
+    margin-top: 150px;
+    margin-left: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+  }
