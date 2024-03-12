@@ -8,10 +8,23 @@ import { stockin } from '../../Services/stockin';
 import { stockout } from '../../Services/stockout';
 
 function StockInForm({ open, handleClose, rerender,stocklist }) {
+    const getCurrentDateTime = () => {
+   
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = `${now.getMonth() + 1}`.padStart(2, '0'); 
+        const day = `${now.getDate()}`.padStart(2, '0'); 
+        const hours = `${now.getHours()}`.padStart(2, '0'); 
+        const minutes = `${now.getMinutes()}`.padStart(2, '0'); 
+      console.log(`${year}-${month}-${day}T${hours}:${minutes}`);
+        return `${year}-${month}-${day}T${hours}:${minutes}`;
+      
+      
+    };
     const [superState, setSuperState] = useState({
         product_id: null,
         quantity: 0,
-        date: ''
+        datetime: getCurrentDateTime()
     });
 
 
@@ -43,7 +56,7 @@ function StockInForm({ open, handleClose, rerender,stocklist }) {
         if (superState.date && superState.product_id && superState.quantity) {
             const product = superState;
             const respectiveStock=stocklist.filter((stock)=>{
-                //console.log(stock.product_id,superState.product_id);
+             
               return stock.product_id== superState.product_id
             })
            
@@ -104,13 +117,14 @@ function StockInForm({ open, handleClose, rerender,stocklist }) {
                             onChange={handleAllInputChange}
                         />
                         <label htmlFor="date">Date:</label>
-                        <input
-                            name="date"
-                            type="date"
-                            id="date"
-                            value={superState.date}
-                            onChange={handleAllInputChange}
-                        />
+                        <label htmlFor="datetime">Date and Time:</label>
+            <input
+              name="datetime"
+              type="datetime-local"
+              id="datetime"
+              value={superState.datetime}
+              onChange={handleAllInputChange}
+            />
                     </div>
                 </DialogContent>
                 <DialogActions sx={{ marginLeft: "10px" }}>

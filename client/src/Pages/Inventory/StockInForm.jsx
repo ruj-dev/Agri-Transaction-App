@@ -11,10 +11,10 @@ function StockInForm({ open, handleClose, rerender }) {
    
       const now = new Date();
       const year = now.getFullYear();
-      const month = `${now.getMonth() + 1}`.padStart(2, '0'); // Add leading zero if needed
-      const day = `${now.getDate()}`.padStart(2, '0'); // Add leading zero if needed
-      const hours = `${now.getHours()}`.padStart(2, '0'); // Add leading zero if needed
-      const minutes = `${now.getMinutes()}`.padStart(2, '0'); // Add leading zero if needed
+      const month = `${now.getMonth() + 1}`.padStart(2, '0'); 
+      const day = `${now.getDate()}`.padStart(2, '0'); 
+      const hours = `${now.getHours()}`.padStart(2, '0'); 
+      const minutes = `${now.getMinutes()}`.padStart(2, '0'); 
     console.log(`${year}-${month}-${day}T${hours}:${minutes}`);
       return `${year}-${month}-${day}T${hours}:${minutes}`;
     
@@ -24,7 +24,7 @@ function StockInForm({ open, handleClose, rerender }) {
   const [superState, setSuperState] = useState({
     product_id: 1,
     quantity: 0,
-    datetime: getCurrentDateTime() // Initialize with current date and time
+    datetime: getCurrentDateTime() 
   });
 
   const handleAllInputChange = (event) => {

@@ -266,7 +266,7 @@ app.get('/getproductsinfo', (req, res) => {
 app.get('/getproducthistory/:id', (req, res) => {
     const id=req.params.id.slice(1);
     console.log(id);
-    let info=[];
+    let info={};
     let history=[];
     const productinfo = 'SELECT product_id,product_name,quantity FROM inventory_list where product_id=?';
     const producthistory='select entry_id,quantity,movement_type,entrydate from inventory_history where product_id=?';

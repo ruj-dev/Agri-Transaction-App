@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { TextField, Dialog, DialogTitle, DialogContent, DialogActions, Button, Select, MenuItem } from '@mui/material';
-
-
-
 import { toast } from 'react-toastify';
 import { addProduct } from '../../Services/addProduct';
 function AddProduct({ open, handleClose, rerender }) {
@@ -47,7 +44,6 @@ const dialogClose=()=>{
   useEffect(() => {
     if (open) {
      
-
 
     }
   }, [open]);
