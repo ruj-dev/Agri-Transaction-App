@@ -9,7 +9,7 @@
     margin-right: auto;
     border-radius: 0.8rem;
     cursor: pointer;
-    background-color: aqua!important;
+    background-color: rgb(215, 209, 209)!important;
 }
 .history-container{
     display: flex;

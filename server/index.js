@@ -116,9 +116,9 @@ app.get('/expenseReport', (req, res) => {
 app.post('/transactions/:id', (req, res) => {
     const Id = req.params.id.slice(1);
     console.log(Id);
-    const { name, description, type, amount, date } = req.body;
-    const sql = 'UPDATE Transactions SET name = ?, description = ?, type = ?, amount = ?, date = ? WHERE id = ?';
-    const values = [name, description, type, amount, date, Id];
+    const { name, description, type, amount, date,source } = req.body;
+    const sql = 'UPDATE Transactions SET name = ?, description = ?, type = ?, amount = ?, date = ?,source=? WHERE id = ?';
+    const values = [name, description, type, amount, date,source, Id];
     connection.query(sql, values, (error, results, fields) => {
         if (error) {
             console.error('Error updating transaction:', error);
@@ -220,13 +220,13 @@ console.log("stockin",);
 
 app.post('/stockout', (req, res) => {
     {
-        const { product_id, product_name, quantity, date } = req.body;
+        const { product_id, product_name, quantity, datetime } = req.body;
 
 
         const sqlUpdateQuantity = 'UPDATE inventory_list SET quantity = quantity - ? WHERE product_id = ?';
 
         const historySql = 'INSERT INTO inventory_history (product_id, quantity, movement_type, entrydate) VALUES (?, ?, ?, ?)'
-        console.log("stockout", product_id, product_name, quantity, date);
+        console.log("stockout", product_id, product_name, quantity, datetime);
         connection.query(sqlUpdateQuantity, [quantity, product_id], (err, result) => {
             if (err) {
                 console.error('Error adding stock in entry: ', err);
@@ -236,7 +236,7 @@ app.post('/stockout', (req, res) => {
                 return;
             }
 
-            connection.query(historySql, [product_id, -quantity, 'out', date], (err, result) => {
+            connection.query(historySql, [product_id, -quantity, 'out', datetime], (err, result) => {
                 if (err) {
                     console.error('Error adding stock ou entry to history: ', err);
                     connection.rollback(() => {

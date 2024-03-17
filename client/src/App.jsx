@@ -16,6 +16,7 @@ import ExpenseHead from './Pages/ExpenseHead/ExpenseHead';
 import Inventory from './Pages/Inventory/Inventory';
 import Report2 from './Pages/Reports/Report2';
 import ProductPage from './Pages/ProductPage/ProductPage';
+import { ToastContainer } from 'react-toastify';
 function App() {
 
 

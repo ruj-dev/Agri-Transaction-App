@@ -47,7 +47,7 @@ function StockInForm({ open, handleClose, rerender,stocklist }) {
                 setProductinfo(data);
             })
             .catch(error => {
-                console.error('Error fetching sources:', error);
+                console.error('Error fetching product:', error);
             });
     };
     const handleSubmit = async () => {
